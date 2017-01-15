@@ -13,8 +13,43 @@ public class Person implements Comparable {
         age = a;
     }
 
-    public boolean equals() {
-
+    public boolean equals(Object otherObject) {
+        Person other = (Person) otherObject;
+        return (this.firstName.equals(other.firstName)) && (this.lastName.equals(other.lastName)) && (this.age ==(other.age));
     }
 
+    public int compareTo(Object otherObject) {
+
+        // 1. return 0 if objects are equal
+        boolean b = this.equals(otherObject);
+        if (b) {
+            return 0;
+        }
+        // 2. compare last names of Persons with compareTo of String
+        Person other = (Person) otherObject;
+        String s1 = this.lastName;
+        String s2 = other.lastName;
+
+        int rc = s1.compareTo(s2);
+        if (rc != 0) {
+            return rc;
+        }
+
+        // 3. compare first names of Persons with compare of String
+        String f1 = this.firstName;
+        String f2 = other.firstName;
+
+        rc = f1.compareTo(f2);
+        if (rc != 0) {
+            return rc;
+        }
+
+        // 4. compare age of Persons with if
+        if (this.age > other.age) {
+            return 1;
+        }
+        if (this.age < other.age) {
+            return -1;
+        }
+    }
 }
