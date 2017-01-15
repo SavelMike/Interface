@@ -13,6 +13,8 @@ public class Person implements Comparable {
         age = a;
     }
 
-    public boolean equals
+    public boolean equals() {
+
+    }
 
 }
