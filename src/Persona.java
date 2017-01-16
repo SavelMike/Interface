@@ -12,5 +12,7 @@ public class Persona implements Measurable {
         height = h;
     }
 
-    
+    public double getMeasure() {
+        return height;
+    }
 }
