@@ -1,3 +1,4 @@
+import java.util.Collections;
 /**
  * Created by Михаил on 15.01.2017.
  */
@@ -50,5 +51,9 @@ public class Person implements Comparable {
         } else {
             return -1;
         }
+    }
+
+    public String toString() {
+       return "Last name: " + lastName + ", first name: " + firstName + ", age: " + age;
     }
 }
