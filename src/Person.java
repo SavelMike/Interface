@@ -37,10 +37,10 @@ public class Person implements Comparable {
         }
 
         // 3. compare first names of Persons with compare of String
-        String f1 = this.firstName;
-        String f2 = other.firstName;
+        s1 = this.firstName;
+        s2 = other.firstName;
 
-        rc = f1.compareTo(f2);
+        rc = s1.compareTo(s2);
         if (rc != 0) {
             return rc;
         }
@@ -54,6 +54,6 @@ public class Person implements Comparable {
     }
 
     public String toString() {
-       return "Last name: " + lastName + ", first name: " + firstName + ", age: " + age;
+       return "Last name: " + lastName + ", first name: " + firstName + ", age: " + age + "\n";
     }
 }
